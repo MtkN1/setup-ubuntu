@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request: null
+  workflow_dispatch: null
+
+jobs:
+  ruff:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v6
+      - uses: astral-sh/ruff-action@v3
+        with:
+          src: ./main.py
+
+  pyright:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v6
+      - uses: jakebailey/pyright-action@v2
+        with:
+          python-version: "3.12"
+          extra-args: ./main.py

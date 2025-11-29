@@ -1,0 +1,8 @@
+#cloud-config
+packages:
+  - ca-certificates
+  - curl
+  - git
+  - python3
+  - sudo
+  - wget

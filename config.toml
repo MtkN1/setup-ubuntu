@@ -1,0 +1,102 @@
+apt = [
+    "bash-completion",
+    "build-essential",
+    "fonts-noto-cjk",
+    "htop",
+    "language-pack-ja",
+    "manpages-ja",
+    "nano",
+    "software-properties-common",
+    "ubuntu-minimal",
+    "ubuntu-standard",
+]
+
+snap = [
+    "lxd",
+]
+
+snap_classic = [
+    "aws-cli",
+    "google-cloud-cli",
+]
+
+mise_core = [
+    "go",
+    "node",
+    "rust",
+]
+
+mise = [
+    "aqua:BurntSushi/ripgrep",
+    "aqua:astral-sh/uv",
+    "aqua:cli/cli",
+    "aqua:ducaale/xh",
+    "aqua:eza-community/eza",
+    "aqua:jdx/usage",
+    "aqua:jqlang/jq",
+    "aqua:lsd-rs/lsd",
+    "aqua:mikefarah/yq",
+    "aqua:sharkdp/bat",
+    "aqua:sharkdp/fd",
+    "aqua:starship/starship",
+    "npm:@github/copilot",
+    "npm:@anthropic-ai/claude-code",
+    "npm:@google/gemini-cli",
+    "npm:@dotenvx/dotenvx",
+    "npm:@openai/codex",
+]
+
+uv_python = [
+    "3.10",
+    "3.11",
+    "3.12",
+    "3.13",
+    "3.13t",
+    "3.14",
+    "3.14t",
+]
+
+uv_tool = [
+    "hatch",
+    "httpie",
+    { operand = "openhands", options = [ "--python", "3.12" ] },
+    "pdm",
+    "poetry",
+    { operand = "posting", options = [ "--python", "3.13" ] },
+]
+
+docker_apt = [
+    "containerd.io",
+    "docker-buildx-plugin",
+    "docker-ce",
+    "docker-ce-cli",
+    "docker-compose-plugin",
+]
+
+docker_image = [
+    "mcr.microsoft.com/devcontainers/base:noble",
+    "mcr.microsoft.com/devcontainers/base:trixie",
+]
+
+setup = [
+    "echo 'complete -C /snap/aws-cli/current/bin/aws_completer aws' > ~/.local/share/bash-completion/completions/aws",
+    "bat --completion bash > ~/.local/share/bash-completion/completions/bat",
+    "codex completion bash > ~/.local/share/bash-completion/completions/codex",
+    "curl -fL https://github.com/eza-community/eza/raw/refs/heads/main/completions/bash/eza > ~/.local/share/bash-completion/completions/eza",
+    "fd --gen-completions bash > ~/.local/share/bash-completion/completions/fd",
+    "gh completion -s bash > ~/.local/share/bash-completion/completions/gh",
+    "cat /snap/google-cloud-cli/current/completion.bash.inc > ~/.local/share/bash-completion/completions/gcloud",
+    "_HATCH_COMPLETE=bash_source hatch > ~/.local/share/bash-completion/completions/hatch",
+    "mise completion bash --include-bash-completion-lib > ~/.local/share/bash-completion/completions/mise",
+    "node --completion-bash > ~/.local/share/bash-completion/completions/node",
+    "npm completion bash > ~/.local/share/bash-completion/completions/npm",
+    "pdm completion bash > ~/.local/share/bash-completion/completions/pdm",
+    "poetry completions bash > ~/.local/share/bash-completion/completions/poetry",
+    "rg --generate complete-bash > ~/.local/share/bash-completion/completions/rg",
+    "starship completions bash > ~/.local/share/bash-completion/completions/starship_completions",
+    "starship preset gruvbox-rainbow -o ~/.config/starship.toml",
+    "uv generate-shell-completion bash > ~/.local/share/bash-completion/completions/uv",
+    "uvx --generate-shell-completion bash > ~/.local/share/bash-completion/completions/uvx",
+    "xh --generate=complete-bash > ~/.local/share/bash-completion/completions/xh",
+    "yq completion bash > ~/.local/share/bash-completion/completions/yq",
+]
